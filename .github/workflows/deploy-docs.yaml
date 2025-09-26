@@ -19,8 +19,9 @@ jobs:
           python-version: 3.x
 
       - name: Install MkDocs
-        run: pip install mkdocs-material
-        run: pip install mkdocs-git-revision-date-localized-plugin
+        run: |
+          pip install mkdocs-material
+          pip install mkdocs-git-revision-date-localized-plugin
 
       - name: Build site
         run: |
