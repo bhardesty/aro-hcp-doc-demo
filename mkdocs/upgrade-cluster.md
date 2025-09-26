@@ -1,4 +1,0 @@
-
-# Upgrade a cluster
-
-TODO
