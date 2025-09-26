@@ -19,10 +19,9 @@ jobs:
           python-version: 3.x
 
       - name: Install MkDocs
-        run: pip install mkdocs
+        run: pip install mkdocs-material
 
       - name: Build site
-        # This builds the site into a 'site' directory inside 'mkdocs_project'
         run: |
           cd mkdocs_project
           mkdocs build
@@ -50,7 +49,6 @@ jobs:
         run: dotnet tool update -g docfx
 
       - name: Build site
-        # This builds the site into a '_site' directory inside 'docfx_project'
         run: |
           cd docfx_project
           docfx build
