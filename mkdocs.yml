@@ -1,0 +1,45 @@
+site_name: ARO HCP Documentation
+docs_dir: mkdocs
+repo_url: https://github.com/bhardesty/aro-hcp-doc-demo
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - navigation.tabs
+extra_css:
+  - css/override.css
+nav:
+  - Home: index.md
+  - User docs:
+    - Overview:
+      - Introduction: introduction.md
+      - Service definition: service-def.md
+      - Architecture: architecture.md
+    - Set up clusters: 
+      - Overview of cluster configuration choices: cluster-configuration.md
+      - Create a cluster: create-cluster.md
+    - Manage clusters:
+      - Configure an external authentication provider: external-auth.md
+      - Add pull secrets to access private registries: add-pull-secrets.md
+      - Resize a cluster: resize-cluster.md
+      - Upgrade a cluster: upgrade-cluster.md
+    - Monitor clusters:
+      - Get audit logs from Shoebox: get-audit-logs.md
+    - Reference:
+      - API reference: api.md
+plugins:
+  - search
+  - git-revision-date-localized
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - admonition
+  - def_list
+  - toc:
+      permalink: true
+      toc_depth: 2
