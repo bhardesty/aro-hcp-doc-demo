@@ -6,6 +6,7 @@
         "files": [
           "**/*.{md,yml}"
         ],
+        "src": "docs",
         "exclude": [
           "_site/**"
         ]

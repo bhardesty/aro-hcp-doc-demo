@@ -1,5 +1,5 @@
 site_name: ARO HCP Documentation
-docs_dir: mkdocs
+docs_dir: docs
 repo_url: https://github.com/bhardesty/aro-hcp-doc-demo
 theme:
   name: material

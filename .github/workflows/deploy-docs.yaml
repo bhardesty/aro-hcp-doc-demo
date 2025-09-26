@@ -1,0 +1,87 @@
+name: Build and Deploy Documentation Sites
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # Job to build the MkDocs site
+  build-mkdocs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install MkDocs
+        run: pip install mkdocs
+
+      - name: Build site
+        # This builds the site into a 'site' directory inside 'mkdocs_project'
+        run: |
+          cd mkdocs_project
+          mkdocs build
+
+      - name: Upload artifact
+        # Upload the generated HTML site for the deploy job
+        uses: actions/upload-artifact@v4
+        with:
+          name: mkdocs-site
+          path: mkdocs_project/site/
+
+  # Job to build the DocFX site
+  build-docfx:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+
+      - name: Install DocFX
+        run: dotnet tool update -g docfx
+
+      - name: Build site
+        # This builds the site into a '_site' directory inside 'docfx_project'
+        run: |
+          cd docfx_project
+          docfx build
+
+      - name: Upload artifact
+        # Upload the generated HTML site for the deploy job
+        uses: actions/upload-artifact@v4
+        with:
+          name: docfx-site
+          path: docfx_project/_site/
+
+  # Job to deploy both sites to GitHub Pages
+  deploy:
+    runs-on: ubuntu-latest
+    # This job runs only after both build jobs have succeeded
+    needs: [build-mkdocs, build-docfx]
+    steps:
+      - name: Download MkDocs artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mkdocs-site
+          path: site/mkdocs
+
+      - name: Download DocFX artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: docfx-site
+          path: site/docfx
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
