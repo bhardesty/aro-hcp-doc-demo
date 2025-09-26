@@ -1,0 +1,47 @@
+site_name: ARO HCP Documentation
+repo_url: https://github.com/Azure/ARO-HCP
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - navigation.tabs
+extra_css:
+  - css/override.css
+nav:
+  - Home: index.md
+  - User docs:
+    - Overview:
+      - Introduction: user-docs/introduction.md
+      - Service definition: user-docs/service-def.md
+      - Architecture: user-docs/architecture.md
+    - Set up clusters: 
+      - Overview of cluster configuration choices: user-docs/cluster-configuration.md
+      - Create a cluster: user-docs/create-cluster.md
+    - Manage clusters:
+      - Configure an external authentication provider: user-docs/external-auth.md
+      - Add pull secrets to access private registries: user-docs/add-pull-secrets.md
+      - Resize a cluster: user-docs/resize-cluster.md
+      - Upgrade a cluster: user-docs/upgrade-cluster.md
+    - Monitor clusters:
+      - Get audit logs from Shoebox: user-docs/get-audit-logs.md
+    - Reference:
+      - API reference: api.md
+  - Developer docs: 
+    - Architecture: high-level-architecture.md
+  - API reference: api.md
+plugins:
+  - search
+  - git-revision-date-localized
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - admonition
+  - def_list
+  - toc:
+      permalink: true
+      toc_depth: 2
