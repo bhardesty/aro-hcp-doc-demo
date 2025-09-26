@@ -1,3 +1,16 @@
+- [Create a cluster](#create-a-cluster)
+  - [Prerequisites](#prerequisites)
+    - [Azure CLI requirement](#azure-cli-requirement)
+    - [Verify resource quota](#verify-resource-quota)
+    - [Verify permissions](#verify-permissions)
+    - [Register resource providers](#register-resource-providers)
+  - [Create a Bicep file](#create-a-bicep-file)
+    - [Default resources to define](#default-resources-to-define)
+    - [Resources to define for customer-managed etcd encryption](#resources-to-define-for-customer-managed-etcd-encryption)
+    - [Example Bicep file](#example-bicep-file)
+  - [Create the cluster using Bicep](#create-the-cluster-using-bicep)
+  - [Access the cluster](#access-the-cluster)
+  - [Clean up](#clean-up)
 
 # Create a cluster
 

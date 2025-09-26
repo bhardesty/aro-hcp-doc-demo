@@ -1,3 +1,13 @@
+- [Microsoft Azure Red Hat OpenShift with hosted control planes](#microsoft-azure-red-hat-openshift-with-hosted-control-planes)
+  - [Cluster node scaling](#cluster-node-scaling)
+  - [Fully managed underlying control plane infrastructure](#fully-managed-underlying-control-plane-infrastructure)
+  - [Flexible, consumption-based pricing](#flexible-consumption-based-pricing)
+  - [Single bill for Red Hat OpenShift and Azure usage](#single-bill-for-red-hat-openshift-and-azure-usage)
+  - [Fully integrated support experience](#fully-integrated-support-experience)
+  - [Azure service integration](#azure-service-integration)
+  - [Maximum availability](#maximum-availability)
+  - [Optimized clusters](#optimized-clusters)
+
 # Microsoft Azure Red Hat OpenShift with hosted control planes
 
 The Microsoft Azure Red Hat OpenShift with hosted control planes service is a fully-managed turnkey application platform that allows you to focus on what matters most, delivering value to your customers by building and deploying applications. Red Hat and Microsoft SRE experts manage the underlying platform so you do not have to worry about infrastructure management. Azure Red Hat OpenShift with hosted control planes provides seamless integration with a wide range of Azure compute, database, analytics, machine learning, networking, mobile, and other services to further accelerate the building and delivering of differentiating experiences to your customers.
