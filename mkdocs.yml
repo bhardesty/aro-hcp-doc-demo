@@ -1,5 +1,6 @@
 site_name: ARO HCP Documentation
-repo_url: https://github.com/Azure/ARO-HCP
+docs_dir: mkdocs
+repo_url: https://github.com/bhardesty/aro-hcp-doc-demo
 theme:
   name: material
   features:
@@ -11,24 +12,21 @@ nav:
   - Home: index.md
   - User docs:
     - Overview:
-      - Introduction: user-docs/introduction.md
-      - Service definition: user-docs/service-def.md
-      - Architecture: user-docs/architecture.md
+      - Introduction: introduction.md
+      - Service definition: service-def.md
+      - Architecture: architecture.md
     - Set up clusters: 
-      - Overview of cluster configuration choices: user-docs/cluster-configuration.md
-      - Create a cluster: user-docs/create-cluster.md
+      - Overview of cluster configuration choices: cluster-configuration.md
+      - Create a cluster: create-cluster.md
     - Manage clusters:
-      - Configure an external authentication provider: user-docs/external-auth.md
-      - Add pull secrets to access private registries: user-docs/add-pull-secrets.md
-      - Resize a cluster: user-docs/resize-cluster.md
-      - Upgrade a cluster: user-docs/upgrade-cluster.md
+      - Configure an external authentication provider: external-auth.md
+      - Add pull secrets to access private registries: add-pull-secrets.md
+      - Resize a cluster: resize-cluster.md
+      - Upgrade a cluster: upgrade-cluster.md
     - Monitor clusters:
-      - Get audit logs from Shoebox: user-docs/get-audit-logs.md
+      - Get audit logs from Shoebox: get-audit-logs.md
     - Reference:
       - API reference: api.md
-  - Developer docs: 
-    - Architecture: high-level-architecture.md
-  - API reference: api.md
 plugins:
   - search
   - git-revision-date-localized
