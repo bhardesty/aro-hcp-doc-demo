@@ -6,7 +6,6 @@
         "files": [
           "**/*.{md,yml}"
         ],
-        "src": "docs",
         "exclude": [
           "_site/**"
         ]
@@ -25,8 +24,8 @@
       "modern"
     ],
     "globalMetadata": {
-      "_appName": "ARO HCP Documentation",
-      "_appTitle": "ARO HCP Documentation",
+      "_appName": "ARO HCP Docs",
+      "_appTitle": "ARO HCP Docs",
       "_enableSearch": true,
       "pdf": true
     }
