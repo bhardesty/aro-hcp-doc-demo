@@ -15,7 +15,7 @@
       "source_relative_path": "docs/architecture.md",
       "output": {
         ".html": {
-          "relative_path": "architecture.html"
+          "relative_path": "docs/architecture.html"
         }
       },
       "version": ""
@@ -25,17 +25,17 @@
       "source_relative_path": "docs/create-cluster.md",
       "output": {
         ".html": {
-          "relative_path": "create-cluster.html"
+          "relative_path": "docs/create-cluster.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/index.md",
+      "source_relative_path": "docs/getting-started.md",
       "output": {
         ".html": {
-          "relative_path": "index.html"
+          "relative_path": "docs/getting-started.html"
         }
       },
       "version": ""
@@ -45,7 +45,7 @@
       "source_relative_path": "docs/introduction.md",
       "output": {
         ".html": {
-          "relative_path": "introduction.html"
+          "relative_path": "docs/introduction.html"
         }
       },
       "version": ""
@@ -55,7 +55,7 @@
       "source_relative_path": "docs/service-def.md",
       "output": {
         ".html": {
-          "relative_path": "service-def.html"
+          "relative_path": "docs/service-def.html"
         }
       },
       "version": ""
@@ -63,6 +63,29 @@
     {
       "type": "Toc",
       "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html"
