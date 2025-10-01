@@ -54,6 +54,7 @@ jobs:
         run: |
           cd docfx_project
           docfx build
+          docfx pdf
 
       - name: Upload artifact
         # Upload the generated HTML site for the deploy job
